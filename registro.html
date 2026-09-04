@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crear cuenta | IronForce</title>
+<meta name="robots" content="noindex">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https://images.unsplash.com data:; font-src 'self' https://fonts.gstatic.com; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; script-src 'self'; form-action 'self'; connect-src 'self' https://*.supabase.co; frame-ancestors 'none'; base-uri 'self'; object-src 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<div class="auth-page">
+  <div class="auth-card">
+    <p class="eyebrow"><a href="index.html" class="logo">IRON<span>FORCE</span></a></p>
+    <h1>Crear cuenta</h1>
+    <p class="auth-sub">Registrate para reservar tus clases con IronForce.</p>
+
+    <p class="form-error" id="register-error" role="alert" hidden></p>
+
+    <form class="auth-form" id="register-form" novalidate>
+      <div class="form-row">
+        <label for="full_name">Nombre completo</label>
+        <input type="text" id="full_name" name="full_name" maxlength="80" autocomplete="name" required>
+      </div>
+      <div class="form-row">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" maxlength="120" autocomplete="email" required>
+      </div>
+      <div class="form-row">
+        <label for="phone">Telefono (opcional)</label>
+        <input type="tel" id="phone" name="phone" maxlength="20" autocomplete="tel">
+      </div>
+      <div class="form-row">
+        <label for="password">Contrasena</label>
+        <input type="password" id="password" name="password" autocomplete="new-password" minlength="8" required>
+      </div>
+      <div class="form-row">
+        <label for="password_confirm">Repetir contrasena</label>
+        <input type="password" id="password_confirm" name="password_confirm" autocomplete="new-password" minlength="8" required>
+      </div>
+      <label class="checkbox-row">
+        <input type="checkbox" name="privacy" required>
+        <span>Acepto la <a href="privacidad.html" target="_blank" rel="noopener noreferrer">politica de privacidad</a> y el tratamiento de mis datos para gestionar mi cuenta y mis reservas.</span>
+      </label>
+      <button type="submit" class="btn btn-primary btn-full">Crear cuenta</button>
+    </form>
+
+    <p class="form-success" id="register-success" hidden>
+      Cuenta creada. Revisa tu email para confirmarla y despues <a href="login.html">iniciar sesion</a>.
+    </p>
+
+    <p class="auth-switch">Ya tenes cuenta? <a href="login.html">Iniciar sesion</a></p>
+  </div>
+</div>
+<script type="module" src="js/auth.js"></script>
+</body>
+</html>

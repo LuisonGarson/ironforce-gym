@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mis reservas | IronForce</title>
+<meta name="robots" content="noindex">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https://images.unsplash.com data:; font-src 'self' https://fonts.gstatic.com; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; script-src 'self'; form-action 'self'; connect-src 'self' https://*.supabase.co; frame-ancestors 'none'; base-uri 'self'; object-src 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<div class="app-shell container">
+  <div class="dash-header">
+    <div>
+      <p class="eyebrow"><a href="index.html" class="logo">IRON<span>FORCE</span></a></p>
+      <h1 class="dash-title">Mis reservas</h1>
+      <p class="hero-sub" style="margin:4px 0 0;">Hola, <span id="client-name">...</span></p>
+    </div>
+    <div style="display:flex; gap:12px;">
+      <a href="dashboard-admin.html" id="admin-link" class="btn btn-outline btn-sm" hidden>Panel admin</a>
+      <button type="button" id="logout-btn" class="btn btn-outline btn-sm">Cerrar sesion</button>
+    </div>
+  </div>
+
+  <section class="dash-section">
+    <h2>Proximas clases disponibles</h2>
+    <div class="class-grid" id="available-classes">
+      <p class="empty-state">Cargando...</p>
+    </div>
+  </section>
+
+  <section class="dash-section">
+    <h2>Tus reservas</h2>
+    <table class="data-table">
+      <thead>
+        <tr><th>Clase</th><th>Estado</th><th></th></tr>
+      </thead>
+      <tbody id="my-bookings-tbody">
+        <tr><td colspan="3" class="empty-state">Cargando...</td></tr>
+      </tbody>
+    </table>
+  </section>
+</div>
+<script type="module" src="js/booking.js"></script>
+</body>
+</html>
